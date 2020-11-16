@@ -9,6 +9,7 @@ module.exports = {
         paths: ['src'],
         alias: {
           _assets: './src/assets',
+          _contexts: './src/contexts',
           _components: './src/components',
           _atoms: './src/components/atoms',
           _molecules: './src/components/molecules',

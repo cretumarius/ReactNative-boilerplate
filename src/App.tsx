@@ -1,8 +1,13 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { AppNavigator, AuthNavigator } from '_navigation';
+import { AuthContextProvider } from '_contexts';
+import { Startup } from '_scenes';
 
-const isLoggedIn = false;
-const App = () => <NavigationContainer>{!isLoggedIn ? <AuthNavigator /> : <AppNavigator />}</NavigationContainer>;
+const App = () => {
+  return (
+    <AuthContextProvider>
+      <Startup />
+    </AuthContextProvider>
+  );
+};
 
 export default App;

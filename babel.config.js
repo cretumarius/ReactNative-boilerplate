@@ -8,6 +8,7 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.ios.js', '.android.js'],
         alias: {
           _assets: './src/assets',
+          _contexts: './src/contexts',
           _components: './src/components',
           _atoms: './src/components/atoms',
           _molecules: './src/components/molecules',

@@ -40,6 +40,7 @@
     "baseUrl": ".",                          /* Base directory to resolve non-absolute module names. */
     "paths": {
       "_assets": ["./src/assets/*"],
+      "_contexts": ["./src/contexts"],
       "_components": ["./src/components"],
       "_atoms": ["./src/components/atoms"],
       "_molecules": ["./src/components/molecules"],
