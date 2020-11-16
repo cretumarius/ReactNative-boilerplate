@@ -4,7 +4,7 @@ import { AppNavigator, AuthNavigator } from '_navigation';
 import { AuthContext } from '_contexts';
 import { View, ActivityIndicator } from 'react-native';
 
-const Startup = () => {
+export const Startup = () => {
   const { loginState, retrieve_token } = useContext(AuthContext);
 
   useEffect(() => {
@@ -22,12 +22,8 @@ const Startup = () => {
   };
 
   const MainView = () => (
-    <NavigationContainer>
-      {loginState.userToken !== undefined ? <AppNavigator /> : <AuthNavigator />}
-    </NavigationContainer>
+    <NavigationContainer>{!!loginState.userToken ? <AppNavigator /> : <AuthNavigator />}</NavigationContainer>
   );
 
   return loginState.isLoading ? <LoadingView /> : <MainView />;
 };
-
-export default Startup;

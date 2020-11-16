@@ -69,7 +69,7 @@ export const AuthContextProvider = ({ children }: any) => {
       },
       signIn: (userName: string, password: string) => {
         let token = null;
-        if (userName === 'user' && password === 'pass') {
+        if (userName === 'User' && password === 'Pass') {
           token = 'token';
         }
         dispatch({
