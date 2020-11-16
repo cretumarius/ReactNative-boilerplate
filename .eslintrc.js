@@ -14,7 +14,7 @@ module.exports = {
           _molecules: './src/components/molecules',
           _organisms: './src/components/organisms',
           _navigation: './src/navigation',
-          _scenes: './src/pages',
+          _scenes: './src/scenes',
           _services: './src/services',
           _styles: './src/styles',
           _utils: './src/utils',

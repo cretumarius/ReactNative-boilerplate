@@ -1,21 +1,8 @@
 import React from 'react';
-import { HelloWorld } from '_atoms';
-import { StyleSheet, View } from 'react-native';
-import { flex_design } from '_styles';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppNavigator, AuthNavigator } from '_navigation';
 
-const App = () => {
-  return (
-    <View style={styles.page}>
-      <HelloWorld name="React Native" />
-    </View>
-  );
-};
+const isLoggedIn = false;
+const App = () => <NavigationContainer>{!isLoggedIn ? <AuthNavigator /> : <AppNavigator />}</NavigationContainer>;
 
 export default App;
-
-const styles = StyleSheet.create({
-  page: {
-    flex: 1,
-    ...flex_design('column', 'center', 'center'),
-  },
-});
