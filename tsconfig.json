@@ -41,13 +41,13 @@
     "paths": {
       "_assets": ["./src/assets/*"],
       "_components": ["./src/components"],
-      "_atoms": ["./src/components/atoms/*"],
-      "_molecules": ["./src/components/molecules/*"],
-      "_organisms": ["./src/components/organisms/*"],
+      "_atoms": ["./src/components/atoms"],
+      "_molecules": ["./src/components/molecules"],
+      "_organisms": ["./src/components/organisms"],
       "_navigation": ["./src/navigation/*"],
       "_scenes": ["./src/scenes/*"],
       "_services": ["./src/services/*"],
-      "_styles": ["./src/styles/*"],
+      "_styles": ["./src/styles"],
       "_utils": ["./src/utils/*"]
     },
     // "paths": {},                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
