@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, SafeAreaView, TouchableHighlight } from 'react-native';
-import { commonStyles } from '_styles';
+import { Common } from '_styles';
 
 const LoginScreen = ({ navigation }: any) => {
   return (
-    <SafeAreaView style={commonStyles.page}>
+    <SafeAreaView style={Common.page}>
       <Text>Screen: Login</Text>
 
       <TouchableHighlight onPress={() => navigation.navigate('home')}>
