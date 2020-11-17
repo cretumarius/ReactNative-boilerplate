@@ -1,20 +1,29 @@
 import React from 'react';
-import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
-import { HomeScreen } from '_scenes';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { HomeScreen, AboutScreen } from '_scenes';
+import { Colors } from '_styles';
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
   return (
-    <Stack.Navigator
-      headerMode={'none'}
-      initialRouteName="home"
-      screenOptions={{
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-      }}
-    >
-      <Stack.Screen name="home" component={HomeScreen} />
-    </Stack.Navigator>
+    <Tab.Navigator tabBarOptions={{ activeTintColor: Colors.PRIMARY, inactiveTintColor: Colors.SECONDARY }}>
+      <Tab.Screen
+        name="home"
+        component={HomeScreen}
+        options={{
+          tabBarLabel: 'Home',
+        }}
+      />
+      <Tab.Screen
+        name="About"
+        component={AboutScreen}
+        options={{
+          unmountOnBlur: true,
+          tabBarLabel: 'About',
+        }}
+      />
+    </Tab.Navigator>
   );
 };
 
